@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoeModel"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <!--ConstraintLayout was chosen here because it allows for chaining horizontally and vertically-->
+    <!--rather than nesting multiple LinearLayouts, RelativeLayouts, or a mix or the two.-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoeListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_double">
+
+        <TextView
+            android:id="@+id/listItemShoeNameTextView"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{shoeModel.name}"
+            app:layout_constraintEnd_toStartOf="@+id/listItemShoeCompanyTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/name" />
+
+        <TextView
+            android:id="@+id/listItemShoeCompanyTextView"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{shoeModel.company}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/listItemShoeNameTextView"
+            app:layout_constraintEnd_toStartOf="@+id/listItemShoeSizeTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/listItemShoeNameTextView"
+            tools:text="@string/company" />
+
+        <TextView
+            android:id="@+id/listItemShoeSizeTextView"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Double.toString(shoeModel.size)}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/listItemShoeNameTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/listItemShoeCompanyTextView"
+            tools:text="@string/size" />
+
+        <TextView
+            android:id="@+id/listItemShoeDescriptionTextView"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_double"
+            android:text="@{shoeModel.description}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listItemShoeCompanyTextView"
+            tools:text="@string/description" />
+
+        <View
+            android:id="@+id/listItemShoeDividerView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin"
+            android:background="@color/colorPrimaryLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listItemShoeDescriptionTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
