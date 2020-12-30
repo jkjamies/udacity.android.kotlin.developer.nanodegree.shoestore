@@ -2,14 +2,14 @@
  *
  * PROJECT LICENSE
  *
- * This project was submitted by Jason Jamieson as part of the Nanodegree At Udacity.
+ * This project was submitted by Jason Jamieson as part of the Android Kotlin Developer Nanodegree At Udacity.
  *
- * As part of Udacity Honor code, your submissions must be your own work, hence
- * submitting this project as yours will cause you to break the Udacity Honor Code
- * and the suspension of your account.
+ * As part of Udacity Honor code, your submissions must be of your own work.
+ * Submission of this project will cause you to break the Udacity Honor Code
+ * and possible suspension of your account.
  *
- * Me, the author of the project, allow you to check the code as a reference, but if
- * you submit it, it's your own responsibility if you get expelled.
+ * I, Jason Jamieson, the author of the project, allow you to check this code as reference, but if
+ * used as submission, it's your responsibility if you are expelled.
  *
  * Copyright (c) 2020 Jason Jamieson
  *
